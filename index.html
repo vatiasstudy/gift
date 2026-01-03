@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For My Angel 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Page 1 -->
+  <div class="page active" id="page1">
+    <div class="bouquet">🌹💐🌹</div>
+    <h1>Angel ✨</h1>
+    <p>
+      When you opened this page, I wanted you to feel special,
+      just like you make everyone feel.
+    </p>
+    <button class="next glow" onclick="nextPage(1)">Next ✨</button>
+  </div>
+
+  <!-- Page 2 -->
+  <div class="page" id="page2">
+    <h2>My Feelings For You 💖</h2>
+    <p class="long-text">
+      You are not just my bestie, you are my safe place.
+      The way you smile, care, and understand me makes my
+      world brighter every single day. I feel lucky to have
+      you in my life because you bring happiness even when
+      things are hard. Your presence itself feels magical,
+      and no matter what happens, I know our bond is strong.
+      You mean more to me than words can ever explain.
+    </p>
+    <button class="next glow" onclick="nextPage(2)">Next ✨</button>
+  </div>
+
+  <!-- Page 3 -->
+  <div class="page" id="page3">
+    <div class="flowers">🌸 🌼 🌺 🌸 🌼 🌺</div>
+    <h2>2026 & Forever 🌈</h2>
+    <p>
+      In 2026 and always, I hope we stay together,
+      supporting each other, laughing together,
+      and creating memories that last forever.
+    </p>
+    <button class="next glow" onclick="nextPage(3)">Next ✨</button>
+  </div>
+<!-- Page 4 -->
+<div class="page hearts" id="page4">
+
+  <div class="last-container">
+
+    <!-- Left Side -->
+    <div class="angel-meaning">
+      <h2>Angel ✨</h2>
+      <p>
+        The name Angel means a messenger of love, light, and kindness.
+        An angel brings peace, comfort, and happiness into others’ lives.
+        You carry this meaning so beautifully through your smile,
+        your care, and your heart. Your presence feels warm and safe,
+        like a blessing in my life. You make ordinary moments special
+        just by being you. You are truly my angel, always.
+        <br><br>
+        <b>Love you — by me 💖</b>
+      </p>
+
+      <!-- NEXT BUTTON -->
+      <button class="next glow" onclick="nextPage(4)">Next ✨</button>
+    </div>
+
+    <!-- Right Side -->
+    <div class="love-area">
+      <h1 class="balloon-text">Love You 💕</h1>
+      <p class="sub-text">I love you a lottttt 🎀</p>
+    </div>
+
+  </div>
+</div>
+
+ <!-- Page 5 -->
+<div class="page final-love" id="page5">
+  <h1 class="final-title">One Last Rule 💫</h1>
+
+  <p class="final-text">
+    Magic says you can’t go ahead without pressing this 😄
+  </p>
+
+  <button class="love-btn" onclick="nextPage(5)">
+    Love You 💖
+  </button>
+
+  <p class="tiny-text">(No escape 😌)</p>
+</div>
+<!-- Page 6 -->
+<div class="page heart-world" id="page6">
+
+  <!-- Falling Text Container -->
+  <div class="falling-text-container"></div>
+
+  <!-- Center Light Bulb -->
+  <div class="bulb-container">
+    💡
+    <p class="say-text">Say it to me 💖</p>
+  </div>
+
+</div>
+
+
+
+    <!-- Left Side Meaning -->
+    <div class="angel-meaning">
+      <h2>Angel ✨</h2>
+      <p>
+        The name Angel means a messenger of love, light, and kindness.
+        An angel is someone who brings peace, comfort, and happiness
+        into the lives of others without even trying. Angels protect,
+        care, and guide people with a pure heart and gentle soul.
+        You truly carry this meaning in everything you do — your smile,
+        your support, your warmth, and your presence make the world
+        brighter. Having you feels like a blessing, and knowing you
+        makes life more beautiful every day. You are my angel, always.
+        <br><br>
+        <b>Love you — by me 💖</b>
+      </p>
+    </div>
+
+    <!-- Right Side Balloon Text -->
+    <div class="love-area">
+      <h1 class="balloon-text">Love You 💕</h1>
+      <p class="sub-text">I love you a lottttt 🎀</p>
+    </div>
+
+  </div>
+</div>
+
+ 
+  <script src="script.js"></script>
+  <div id="angel-note-box">
+  pata hai mein tujhe etna pareshan kyu karta hoon, because i like talking to you.
+  To bhi yeh sochti hogi kitna h pareshan karta hai yeh.
+  pata hum ladko ko sirf ek chiz chyeh hoti hai chahe fir uske bestfreind ho yah gf,
+  <br><br>
+  <b>only attention..................</b>
+</div>
+<script>
+const angelBox = document.getElementById("angel-note-box");
+
+const observer = new MutationObserver(() => {
+  const lastPage = document.querySelector(".last-page, #last-page, .final, .end");
+
+  if (lastPage && lastPage.offsetParent !== null) {
+    angelBox.style.display = "block";
+  }
+});
+
+observer.observe(document.body, { childList: true, subtree: true });
+</script>
+<script>
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    const box = document.getElementById("angel-note-box");
+    box.style.opacity = "1";
+    box.style.visibility = "visible";
+  }, 15000); // 🔥 change to 12000 or 18000 if needed
+});
+</script>
+<div class="last-page">
+  <div class="gift-text-box">
+    <p>
+      Pata hai main tujhe itna pareshaan kyun karta hoon?<br><br>
+      Because mujhe tumse baat karna achha lagta hai.<br>
+      Tu bhi sochti hogi—“kitna pareshaan karta hai yeh!”<br><br>
+
+      Par pata hai, hum ladkon ko sirf ek hi cheez chahiye hoti hai—<br>
+      kisi ka saath, kisi ka time,<br>
+      chahe woh uske best moments ho ya worst.<br><br>
+
+      Aur tere saath baat karke,<br>
+      har moment thoda sa special lagta hai.
+    </p>
+  </div>
+</div>
+
+</body>
+</html>
