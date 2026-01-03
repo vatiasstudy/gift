@@ -1,0 +1,337 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* BODY */
+body {
+  background: black;
+  color: white;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* PAGE BASE */
+.page {
+  display: none;
+  height: 100vh;
+  width: 100%;
+  padding: 40px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+/* ONLY ACTIVE PAGE SHOWS */
+.page.active {
+  display: flex;
+}
+
+/* ---------- PAGE BACKGROUNDS ---------- */
+#page1 {
+  background: radial-gradient(circle, #ff4d6d, #000);
+}
+
+#page2 {
+  background: radial-gradient(circle, #7b2cff, #000);
+}
+
+#page3 {
+  background: radial-gradient(circle, #00ffd5, #000);
+}
+
+#page4 {
+  background: radial-gradient(circle, #ff8fab, #000);
+}
+
+#page5 {
+  background: radial-gradient(circle, #ff69b4, #ff1493, #000);
+}
+
+/* ---------- COMMON TEXT ---------- */
+h1, h2 {
+  margin-bottom: 20px;
+  text-shadow: 0 0 20px pink;
+}
+
+p {
+  max-width: 600px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* ---------- BUTTON ---------- */
+.next {
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: none;
+  background: hotpink;
+  color: black;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.glow {
+  animation: glow 1.5s infinite alternate;
+}
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes glow {
+  from { box-shadow: 0 0 10px pink; }
+  to   { box-shadow: 0 0 30px hotpink; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+/* ---------- PAGE 1 ---------- */
+.bouquet {
+  font-size: 40px;
+  margin-bottom: 20px;
+  animation: float 2s infinite;
+}
+
+/* ---------- PAGE 4 LAYOUT ---------- */
+.last-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LEFT BOX */
+.angel-meaning {
+  width: 45%;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 25px pink;
+  text-align: left;
+}
+
+.angel-meaning h2 {
+  margin-bottom: 10px;
+}
+
+.angel-meaning p {
+  font-size: 16px;
+}
+
+/* RIGHT SIDE */
+.love-area {
+  width: 45%;
+  text-align: center;
+}
+
+/* ---------- BALLOON TEXT ---------- */
+.balloon-text {
+  font-size: 60px;
+  font-weight: bold;
+  color: #ff4d6d;
+  animation: float 3s infinite, balloonGlow 1.5s infinite alternate;
+}
+
+@keyframes balloonGlow {
+  from {
+    text-shadow: 0 0 15px pink;
+  }
+  to {
+    text-shadow: 0 0 40px hotpink, 0 0 60px #ff1e56;
+  }
+}
+
+.sub-text {
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+/* ---------- PAGE 5 ---------- */
+.final-title {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.final-text {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.love-btn {
+  font-size: 36px;
+  padding: 18px 50px;
+  border-radius: 50px;
+  border: none;
+  background: white;
+  color: #ff1493;
+  cursor: pointer;
+  animation: glow 1.5s infinite alternate;
+}
+
+.love-btn:hover {
+  transform: scale(1.1);
+}
+
+.tiny-text {
+  margin-top: 20px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+/* ---------- PAGE 6 HEART WORLD ---------- */
+.heart-world {
+  background: radial-gradient(circle, #ff4d6d, #8b0000, #000);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Light Bulb */
+.bulb-container {
+  font-size: 80px;
+  text-align: center;
+  animation: bulbGlow 1.5s infinite alternate;
+}
+
+.say-text {
+  font-size: 28px;
+  margin-top: 10px;
+  text-shadow: 0 0 20px hotpink;
+}
+
+/* Bulb Glow */
+@keyframes bulbGlow {
+  from {
+    text-shadow: 0 0 20px yellow;
+  }
+  to {
+    text-shadow: 0 0 50px gold, 0 0 80px yellow;
+  }
+}
+
+/* Falling Text */
+.falling-text {
+  position: absolute;
+  top: -50px;
+  color: pink;
+  font-size: 18px;
+  text-shadow: 0 0 15px hotpink;
+  animation: fall linear infinite;
+}
+
+/* Falling Animation */
+@keyframes fall {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
+#angel-note-box {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 330px;
+  padding: 18px;
+
+  background: #fff0f4;              /* solid light background */
+  border: 2px solid #ff4d6d;
+  border-radius: 14px;
+
+  font-family: 'Georgia', serif;
+  font-size: 15px;
+  line-height: 1.7;
+
+  color: #2b2b2b;                    /* 🔥 FIX: dark readable text */
+  text-shadow: none;                /* 🔥 FIX: remove glow */
+  
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  z-index: 999999;
+
+  display: none;                    /* 🔥 hide by default */
+}
+#angel-note-box {
+  animation: fadeInBox 1.5s ease forwards;
+}
+
+@keyframes fadeInBox {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+#angel-note-box {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 330px;
+  padding: 18px;
+
+  background: #fff0f4;
+  border: 2px solid #ff4d6d;
+  border-radius: 14px;
+
+  font-family: Georgia, serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #222;        /* readable text */
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  z-index: 999999;
+
+  display: none;      /* hidden initially */
+}
+#angel-note-box {
+  position: fixed !important;
+  top: 20px !important;
+  right: 20px !important;
+  width: 340px;
+
+  padding: 18px;
+  background: #fff0f4;
+  border: 2px solid #ff4d6d;
+  border-radius: 14px;
+
+  font-family: Georgia, serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #111 !important;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  z-index: 2147483647 !important;
+
+  opacity: 0;
+  visibility: hidden;
+}
+.last-page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.gift-text-box {
+  position: absolute;
+  top: 60px;
+  right: 40px;
+  width: 320px;
+  padding: 20px;
+
+  background-color: #ffe066; /* Yellow color */
+  border-radius: 12px;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
